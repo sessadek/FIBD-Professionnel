@@ -1,0 +1,9 @@
+
+@include media-breakpoint-up(sm) {
+	
+	.container {
+	    padding-left: $gutter-container-left;
+	    padding-right: $gutter-container-right;
+	}
+}
+

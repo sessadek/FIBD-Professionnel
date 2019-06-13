@@ -1,0 +1,258 @@
+.sidebar {
+	.box-shadow {
+		margin-bottom: 25px;
+		strong {
+			display: block;
+		}
+	}
+}
+
+.b-sidebar {
+	box-shadow: 0 2px 10px rgba(0,0,0,0.16);
+	margin-bottom: 30px;
+	padding: 20px 20px 1px;
+	background-color: $white;
+	@include media-breakpoint-down(sm) {
+		margin-bottom: 26px;
+	}
+	&__pdf {
+		font-size: 15px;
+		display: flex;
+		align-items: center;
+		padding: 5px 0 5px 43px;
+		position:  relative;
+		min-height: 40px;
+		margin-bottom: 25px;
+		color: $black;
+		&:before {
+			content: '';
+			position:  absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background: url(#{$image}pdf.svg) no-repeat;
+			background-position: center left;
+			background-size: 31px 40px;
+			width: 31px;
+			height: 40px;
+			display: inline-block;
+		}
+	}
+	&__label {
+		font-size: 18px;
+		margin-bottom: 20px;
+		display: block;
+	}
+	strong {
+		display: block;
+		font-size: 18px;
+	}
+	&__thumb {
+		padding: 0;
+		position: relative;
+		cursor: pointer;
+		&:after {
+			content: '';
+			position: absolute;
+			background-image: url(#{$image}Plein_ecran.svg);
+			width: 30px;
+			height: 30px;
+			display: block;
+			right: 10px;
+			bottom: 10px;
+		}
+		@include media-breakpoint-down(sm) {
+			&.colledInMobile {
+				margin-left: -20px;
+				margin-right: -20px;
+			}
+		}
+		
+	}
+	&.b-card__labels {
+		padding-top: 10px;
+	}
+	.b-card__label {
+		background-color: $white;
+		padding: 16px 0;
+		margin-bottom: 0;
+		margin-left: -7px;
+		margin-right: -7px;
+		@include media-breakpoint-down(sm) {
+			flex-wrap: wrap;
+		}
+		&:not(:last-child) {
+			border-bottom: 1px solid $gray-010;
+		}
+		strong {
+			font-size: 18px;
+		}
+		span, strong:last-of-type {
+			font-size: 16px;
+		}
+		span {
+			flex: 0 0 30%;
+			max-width: 30%;
+			text-align: center;
+			@include media-breakpoint-down(sm) {
+				flex: 0 0 40%;
+				max-width: 40%;
+				text-align: right;
+			}
+		}
+
+		strong:first-of-type {
+			flex: 0 0 45%;
+			max-width: 45%;
+			@include media-breakpoint-down(sm) {
+				flex: 0 0 60%;
+				max-width: 60%;
+				text-align: left;
+			}
+		}
+		strong:last-of-type {
+			flex: 0 0 25%;
+			max-width: 25%;
+			text-align: right;
+			@include media-breakpoint-down(sm) {
+				flex: 0 0 100%;
+				max-width: 100%;
+				text-align: left;
+				margin-top: 12px;
+			}
+		}
+
+	}
+
+	.p strong {
+		@include media-breakpoint-down(sm) {
+			font-size: 16px;
+		}
+		
+	}
+}
+
+.lightbox-carousel__popup {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	
+	z-index: 1080;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.3s all;
+	&.is-show {
+		visibility: visible;
+		opacity: 1;
+	}
+	&--container {
+		max-width: 795px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 20px 20px;
+
+    @include media-breakpoint-up(xxl) {
+    	max-width: none;
+			width: 40%;
+    }
+	}
+
+	&--transparent {
+		background-color: rgba(0,0,0,0.6);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+
+.lightbox-carousel {
+	margin-bottom: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+	max-height: calc(100vh - 170px);
+}
+
+
+
+.lightbox-carousel__item {
+
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		max-height: calc(100vh - 170px);
+		@include media-breakpoint-up(xxl) {
+    	width: 100%;
+    }
+	}
+}
+
+
+.lightbox-carousel--nav__item {
+	padding: 10px;
+	outline: none;
+	cursor: pointer;
+	img {
+		width: 100px;
+		height: 87px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(xl) {
+    	height: auto;
+    	width: 100%;
+    }
+	}
+}
+
+.lightbox-carousel--nav {
+	padding-left: 20px;
+	padding-right: 20px;
+	.slick-prev:before, .slick-next:before {
+		width: 16px;
+    height: 16px;
+	}
+
+	.slick-prev {
+		left: 0;
+	}
+	.slick-next {
+    right: 0;
+	}
+	    
+	.slick-prev:before {
+		background-image: url(#{$image}left-arrow-white.svg);
+	}
+	.slick-next:before {
+		background-image: url(#{$image}right-arrow-white.svg);
+		margin-left: auto;
+	}
+}
+
+
+
+.lightbox-carousel__popup--close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: url(#{$image}cancel.svg) no-repeat;
+    background-position: center;
+    background-size: 22px 22px;
+    top: 0;
+    right: 60px;
+    z-index: 1050;
+}
+

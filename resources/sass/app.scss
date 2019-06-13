@@ -1,0 +1,70 @@
+
+// // Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// // Variables
+// @import 'variables';
+
+// // Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+
+// .navbar-laravel {
+//   background-color: #fff;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+// }
+
+@import "bootstrap/bootstrap";
+
+// vars
+
+@import "vars/global";
+@import "vars/fonts";
+@import "vars/colors";
+
+// tools
+@import "tools/fonts";
+@import "tools/placeholder";
+@import "tools/animation";
+@import "tools/triangle";
+@import "tools/gradient";
+@import "tools/vwConvert";
+
+// base
+
+@import "base/base";
+@import "base/print";
+@import "base/grid";
+
+// layout
+
+@import "layout/header";
+@import "layout/navbar";
+@import "layout/footer";
+@import "layout/concour";
+@import "layout/sidebar";
+
+
+// blocks
+
+@import "blocks/b-card";
+@import "blocks/b-actu";
+@import "blocks/b-actualite";
+@import "blocks/b-result";
+@import "blocks/b-adress";
+@import "blocks/b-partenaire";
+@import "blocks/b-hour";
+@import "blocks/b-festival";
+@import "blocks/b-404";
+
+
+//modules
+
+@import "modules/forms";
+@import "modules/tags";
+@import "modules/buttons";
+@import "modules/newsletter";
+@import "modules/s-search";
+@import "modules/bandeau";
+@import "modules/partenaire";
+@import "modules/select2";
+@import "modules/slick";

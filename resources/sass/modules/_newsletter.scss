@@ -1,0 +1,64 @@
+.b-newsletter {
+	max-width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+	padding:  40px $gutter-container;
+	@include media-breakpoint-down(sm) {
+		padding-top: 32px;
+		padding-bottom: 35px;
+		padding: 32px 20px 35px;
+	}
+
+	.h2, .p {
+		text-align: center;
+	}
+	.h2 {
+		margin-bottom: 12px;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 10px;
+		}
+	}
+	.p {
+		margin-bottom: 15px;
+	}
+	@include media-breakpoint-up(sm) {
+		#form-newsletter {
+			display: flex;
+			flex-direction: column;
+			padding-right: 180px;
+			position: relative;
+		}
+	}
+	.btn {
+		margin-left: 13px;
+		min-width: 170px;
+		@include media-breakpoint-up(sm) {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		
+		@include media-breakpoint-down(sm) {
+			margin-left: auto;
+			margin-top: 20px;
+		}
+	}
+
+	.form-group {
+		position: relative;
+		label.error {
+			left: 0;
+		}
+	}
+	.form-control {
+		color: $gray-600;
+		font-size: 12px;
+		height: 40px;
+		@include placeholder-color($gray-600, 12px);
+		border-color: $gray-700;
+		@include media-breakpoint-down(sm) {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+	}
+}

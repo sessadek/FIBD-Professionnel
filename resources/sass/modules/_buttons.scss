@@ -1,0 +1,108 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 40px;
+    padding: 12px 20px 10px;
+    transition: 0.3s background-color;
+    &:after {
+        content: '';
+        width: 7px;
+        height: 12px;
+        background-image: url(#{$image}arrow-right.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-left: 10px;
+    }
+    
+}
+
+.btn-primary {
+	&:hover {
+		background-color: transparent;
+		border-color: $blue;
+		color: $blue;
+        &:after {
+            background-image: url(#{$image}arrow-right-blue.svg);
+        }
+	}
+}
+
+
+.btn-danger {
+    &:hover {
+        background-color: transparent;
+        border-color: $red;
+        color: $red;
+        &:after {
+            background-image: url(#{$image}arrow-right-red.svg);
+        }
+    }
+}
+
+
+
+.btn-more {
+    &:after {
+        background-image: url(#{$image}plus.svg);
+        width: 12px;
+        height: 12px;
+    }
+    &:hover {
+        background-color: $white;
+        &:after {
+            background-image: url(#{$image}plus-turquois.svg);
+            
+        }
+    }
+}
+
+.btn-retour {
+    color: $black;
+    border: 1px solid $black;
+    font-size: 12px;
+    padding-right: 15px;
+    padding-left: 30px;
+    width: auto;
+    position: relative;
+    font-weight: 500;
+    transition: 0.3s all;
+    &:after {
+        position: absolute;
+        background-image: url(#{$image}arrow-right-dark.svg);;
+        top: 52%;
+        transform: translateY(-50%) rotate(180deg);
+        width: 6px;
+        height: 10px;
+        left: 12px;
+        margin-left: 0;
+    }
+    &:hover {
+        color: $white;
+        background-color: $black;
+        &:after {
+            background-image: url(#{$image}arrow-right.svg);
+        }
+    }
+}
+
+.btn-tel {
+    &:after {
+        display: none;
+    }
+	&:before {
+		content: '';
+  	width: 16px;
+  	height: 16px;
+  	background-image: url(#{$image}call-answer.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-right: 10px;
+	}
+	&:hover {
+		&:before {
+			background-image: url(#{$image}call-answer-blue.svg);
+		}
+	}
+}

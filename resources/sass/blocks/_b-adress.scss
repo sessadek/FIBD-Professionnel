@@ -1,0 +1,34 @@
+//  block adress 
+
+.container-adress {
+	padding-top: 45px;
+}
+.b-adress {
+	text-align: center;
+	margin-bottom: 45px;
+	.h1 {
+		@include media-breakpoint-down(sm) {
+			font-size: 26px;
+		}
+	}
+	img {
+		@include media-breakpoint-down(sm) {
+			max-width: 65%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 16px;
+		}
+	}
+	.p{
+		font-size: 20px;
+		margin-bottom: 20px;
+		@include media-breakpoint-down(sm) {
+			font-size: 16px;
+			margin-bottom: 26px;
+		}
+	}
+	.btn {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

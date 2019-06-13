@@ -1,0 +1,32 @@
+.b-partenaires {
+	padding-top: 30px;
+}
+
+.b-partenaire {
+	padding-bottom: 35px;
+	text-align: center;
+	h2 {
+		font-size: 23px;
+	}
+	@include media-breakpoint-up(sm) {
+		h2 {
+			margin-bottom: 22px;
+		}
+
+		.p {
+			font-size: 16px;
+			margin-bottom: 22px;
+		}	
+	}
+
+	&__links {
+		display: inline-block;
+		background-color: $white;
+		padding: 20px;
+	}
+	&__link {
+		margin: 10px;
+		display: inline-block;
+    outline: none;
+	}
+}

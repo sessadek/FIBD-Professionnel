@@ -1,0 +1,12 @@
+{
+    "name": "fibd/front",
+    "description": "creation du site public pour le fibd",
+    "authors": [
+        {
+            "name": "Didier Potiron",
+            "email": "didier@idealcoms.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

@@ -1,0 +1,66 @@
+.b-bandeau {
+  position: relative;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  & > img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 75%;
+    @include media-breakpoint-up(xl) {
+      max-height: vw(500);
+      min-height: 500px;
+    }
+  }
+
+  &__card {
+    @include media-breakpoint-up(sm) {
+      position: absolute;
+      right: $gutter-container-right;
+      bottom: 5%;
+      max-width: 365px;
+    }
+    
+    padding: 35px 30px 28px 43px;
+    background-color: $white;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    @include media-breakpoint-down(sm) {
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      padding: 20px 20px 16px;
+    }
+    .h2 {
+      margin-bottom: 20px;
+      @include media-breakpoint-down(sm) {
+        margin-left: -2px;
+        margin-right: -2px;
+      }
+      
+    }
+    .btn {
+      margin-left: auto;
+      min-width: none;
+      width: 170px;
+    }
+    .p {
+      line-height: 1.14;
+    }
+  }
+
+  &__thumb {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+#map {
+  min-height: 457px;
+  @include media-breakpoint-up(xl) {
+    max-height: vw(500);
+    min-height: 500px;
+  }
+}

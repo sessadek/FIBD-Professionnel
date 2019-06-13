@@ -1,0 +1,113 @@
+.b-actualites {
+	padding-bottom: 40px;
+	@include media-breakpoint-down(sm) {
+		padding-bottom: 30px;
+	}
+	[class*="col"] {
+		display: flex;
+		@include media-breakpoint-down(sm) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	h1 {
+		text-align: center;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-top: 75px;
+		margin-bottom: 0;
+	}
+}
+
+.b-actu {
+	text-align: center;
+	padding: 20px 20px 35px;
+	background-color: transparrent;
+	box-shadow: 0 0 15px transparent;
+	transition: 0.3s box-shadow;
+	margin-top: 35px;
+	margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s all;
+  color: $black;
+  width: 100%;
+  &:hover {
+  	color: $black;
+  }
+  @include media-breakpoint-down(sm) {
+  	padding-left: 10px;
+  	padding-right: 10px;
+  	margin-top: 20px;
+  	margin-bottom: 10px;
+  }
+  .h2 {
+    text-transform: uppercase;
+  	@include media-breakpoint-up(sm) {
+  		flex: 1;
+	    align-self: center;
+	    display: flex;
+	  	&.fz-20 {
+	  		font-size: 20px;
+	  	}
+	  	&.ml--15 {
+	  		margin-left: -15px;
+	  		margin-right: -15px;
+
+	  	}
+  	}
+  }
+  h2 {
+  	margin-bottom: 0;
+  }
+	&__thumb {
+		position: relative;
+		.btn {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+	    visibility: hidden;
+	    transition: 0.3s all;
+	    &:after {
+	    	position: relative;
+        top: -1px;
+	    }
+		}
+	}
+	.p {
+		margin-top: 1rem;
+		margin-bottom: 0;
+		position: relative;
+		transition: 0.3s height;
+		&.is-hidden {
+			overflow: hidden;
+			span {
+				position: absolute;
+				right: 18px;
+				bottom: 0;
+				background-color: $white;
+			}
+		}
+		&:not(.is-hidden) {
+			height: auto !important;
+		}
+		
+		@include media-breakpoint-down(sm) {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+	&:hover {
+		box-shadow: 0 0 15px rgba(0,0,0,0.2);
+		background-color: $white;
+		@include media-breakpoint-down(sm) {
+			box-shadow: 0 0 6px rgba(0,0,0,0.2);
+		}
+		.b-actu__thumb .btn {
+			opacity: 1;
+	    visibility: visible;
+		}
+	}
+}
